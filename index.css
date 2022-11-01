@@ -1,11 +1,35 @@
 /* global css styling - see components for how to style and add comps in modular way for reusability */
 #startBackground {
-    background-image: url("assets/startBackground.png");
-    background-position: center top;
+    background-image: url("/assests/startscreenbg.png");
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
     padding-bottom: 0em;
+}
+
+.grd-background {
+    background: linear-gradient(145deg, #4e55b1, #a8689e, #e9927c, #e9927c, #f5bd76);
+    background-size: 1000% 1000%;
+    -webkit-animation: gradient-background 22s ease infinite;
+    -moz-animation: gradient-background 22s ease infinite;
+    animation: gradient-background 22s ease infinite;
+}
+
+@-webkit-keyframes gradient-background {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
+@-moz-keyframes gradient-background {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
+@keyframes gradient-background {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
 }
 
 
@@ -16,6 +40,10 @@ html {
     box-sizing: border-box;
     overflow-y: none;
     overflow-x: none;
+}
+
+body {
+    overflow: none;
 }
 
 .sideNav {
