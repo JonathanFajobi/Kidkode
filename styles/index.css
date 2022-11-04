@@ -1,6 +1,8 @@
-/* global css styling - see components for how to style and add comps in modular way for reusability */
+/* global css styling - specific components */
+
+/* background styling */
 #startBackground {
-  background-image: url("/assests/startscreenbg.png");
+  background-image: url("/assets/startscreenbg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -56,17 +58,13 @@
     background-position: 0% 13%;
   }
 }
-
+/* component styling */
 html {
   border: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: none;
-}
-
-body {
-  
 }
 
 .sideNav {
@@ -101,7 +99,7 @@ body {
   width: 70%;
 }
 
-/* assests */
+/* assets styling */
 #stage1interlude {
   width: 100%;
   height: 100%;

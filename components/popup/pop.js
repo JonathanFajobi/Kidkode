@@ -22,3 +22,5 @@ pop = () => {
 const rootNode = document.getElementById('pop-root');
 const root = ReactDom.createRoot(rootNode);
 root.render(React.createElement(pop));
+
+export {pop, rootNode, root};
