@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kidkode</title>
+    <link rel="stylesheet" href="/styles/reset.css" media="all" />
+    <link rel="stylesheet" href="/styles/index.css" media="all" />
+    <link rel="stylesheet" href="/styles/util.css" media="all" />
+  </head>
+  <body class="flex-container flex-row">
+    <div id="content">
+      <h3>First Walkthrough</h3>
+      <h5>How would you finish off this code snippet?</h5>
+
+      <form id="form" action="" method="">
+        <ul id="answers">
+       
+          <li>
+            <input type="radio" id="answer1" name="answers" title="answer1" placeholder="answer1 "value="&lt;header&gt;This is a heading&lt;/header&gt;"/>  
+            <label for="&lt;header&gt;This is a heading&lt;/header&gt;">&lt;header&gt;This is a heading&lt;/header&gt;</label>
+          </li>
+
+          <li>
+            <input type="radio" id="answer2" name="answers" 
+            value="&lt;header&gt;This is a heading&lt;/header&gt;"/>
+            <label for="&lt;header&gt;This is a heading&lt;/header&gt;">&lt;header&gt;This is a heading&lt;/header&gt;</label>
+          </li>
+
+          <li>
+            <input type="radio" id="answer3" name="answers" 
+            value="&lt;h1&gt;This is a heading&lt;/h1&gt;"/>
+            <label for="&lt;h1&gt;This is a heading&lt;/h1&gt;">&lt;h1&gt;This is a heading&lt;/h1&gt;</label>
+          </li>
+
+          <li>
+            <input type="radio" id="answer4" name="answers" 
+            value="&lt;head&gt;This is a heading&lt;/head&gt;"/>
+            <label for="&lt;head&gt;This is a heading&lt;/head&gt;">&lt;head&gt;This is a heading&lt;/head&gt;</label>
+          </li>
+        </ul>
+        <button id="submit" type="submit">Submit</button>
+      </form>
+
+      <!-- display when user has passed -->
+      <div id="buttonContainer"></div>
+      
+
+      <a href="/index.html">
+        <button type="button">Main</button>
+      </a>
+    </div>
+
+    <!-- insert ide here -->
+    <div id="insert"></div>
+    <div id="hint"></div>
+    <!-- if answers are correct show button to go to next stage  -->
+    <script src="/js/localState.js"></script>
+    <script src="/js/localState.js"></script>
+    <script src="lessonOne.js"></script>
+    <script src="../../ide.js"></script>
+  </body>
+</html>
