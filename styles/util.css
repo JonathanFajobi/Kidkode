@@ -19,12 +19,6 @@
     padding: 1rem;
 }
 
-html {
-    font-family: Arial, Helvetica, sans-serif;
-    scroll-behavior: smooth;
-    background-color: whitesmoke;
-}
-
 .page {
  margin:10vh
 }
@@ -89,17 +83,6 @@ html {
     gap: 5px;
 }
 
-header hgroup {
-    margin: 1.2em;
-    padding: 1.2em;
-    text-align: left;
-    font-weight: bold;
-    color: whitesmoke;
-    background-color: mediumpurple;
-    border: solid 2px black;
-    border-radius: 5px;
-}
-
 h1 {
  font-size: 15vw;
 }
@@ -131,70 +114,4 @@ h6 {
     }
 }
 
-/* Buttons */
-.buttons {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    margin: 2em;
-    float: left;
-    width: 33.33%;
-    padding: 5px;
-}
 
-/* Clear floats after image containers */
-.allButtons::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/* Make the image responsive */
-.buttons img {
-    width: 100%;
-    height: auto;
-    border: solid 2px black;
-  }
-
-/* Style the button and place it at the bottom of the image */
-.buttons .btn {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: mediumpurple;
-    color: whitesmoke;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: solid 2px black;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
-}
-  
-.buttons .btn:hover {
-    background-color: rgb(77, 22, 129);;
-}
-
-.backBtn {
-    margin-left: 2em;
-    margin-top: 2em;
-    background-color: mediumpurple;
-    color: whitesmoke;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: solid 2px black;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.backBtn:hover {
-    background-color: rgb(77, 22, 129);;
-}
-
-/* Page Design */
-.page p {
-    font-size: 1.5vw;
-}

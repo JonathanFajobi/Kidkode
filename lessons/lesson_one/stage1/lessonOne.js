@@ -9,23 +9,27 @@ console.log("times up mate");
 
 setTimeout(redirect, 20000);
 
+setTimeout(() => {
+
+}, 20000)
+
 //give hint onclick
-// const hint = document.getElementById("hint");
-// hint.addEventListener('click', () => {
-//     console.log("running");
-//     document.getElementById("hintarea").insertAdjacentHTML('afterbegin', hint);
-//     document.getElementById("answer2").innerHTML = hint;
+const hint = document.getElementById("hint");
+hint.addEventListener('click', () => {
+    console.log("running");
+    // document.getElementById("hintarea").insertAdjacentHTML('afterbegin', hint);
+    // document.getElementById("answer2").innerHTML = hint;
 
-//     var value = option.value
-//     console.log(value);
-//     const hint = `
-//      <audio></audio>
-//      `
+    // var value = option.value
+    // console.log(value);
+    // const hint = `
+    //  <audio></audio>
+    //  `
 
-//     if (option.value == "option1"){
-//         console.log("correct");
-//     }
-// })
+    // if (option.value == "option1"){
+    //     console.log("correct");
+    // }
+})
 
 //multiple choice questions 
 const form = document.getElementById("form");
@@ -58,7 +62,6 @@ const questions = [
 ]
 
 
-
 const buttonGroup = `
 <a href="../stages.html">
     <button>Pick a stage!</button>
@@ -68,7 +71,6 @@ const buttonGroup = `
     <button type="button">Next</button>
 </a>
 `;
-
 
 
 checkCorrect = () => {
@@ -82,6 +84,7 @@ checkCorrect = () => {
         console.log("correct answer");
         alert("correct answer");
         document.getElementById("buttonContainer").innerHTML = buttonGroup;
+        document.getElementById("ideQContainer").innerHTML = idetask1;
     } else if (userAnswer == null) {
         alert("You need to select an answer");
     }else {
@@ -90,13 +93,13 @@ checkCorrect = () => {
     }
 }
 
-
-
 //respond when video ends
 // let video = document.getElementById("introToHTML").addEventListener('ended', onChange, false);
 
-// let iframe = document.querySelector("iframe");
-// iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args"}', '*');
+let iframe = document.querySelector("#testvideo iframe");
+iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args"}', '*');
+
+
 
 
 

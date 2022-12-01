@@ -11,20 +11,41 @@ const frontend = `
                 <textarea id="css"></textarea>
             </div>
             <div>
-                <button id="submitCode">Submit Task</button>
+                <button id="submitCode" onClick="sub()">Submit Task</button>
             </div>
         </div>
         <iframe id="result"></iframe>
     </div>
 </main>
 `;
-{/* <input type="submit" id="submitCode" style="float:right"></input> */}
-const ideQuestion1 = `
+
+
+const idetask1 = `
 <div>
     <h5>Create a button</h5>
     <p>When you think you have done it correctly, click the submit code button</p>
 </div>
 `;
+
+checkIDE = () => {
+    console.log("submitted");
+    
+    var userAnswer = html_code.value;
+    console.log(userAnswer);
+    console.log(ideQuestions[0].correctAns);
+
+    if (userAnswer == ideQuestions[0].correctAns){
+        console.log("correct answer");
+        alert("correct answer");
+        window.location.replace("complete.html");
+    } else if (userAnswer == null) {
+        alert("You need to select an answer");
+    }else {
+        console.log("incorrect");
+        alert("incorrect");
+    }
+}
+
 
 document.getElementById("insert").innerHTML = frontend;
 
@@ -32,18 +53,15 @@ const html_code = document.querySelector('.html-code textarea');
 const css_code = document.querySelector('.css-code textarea');
 const result = document.querySelector('#result');
 
-// var tracker = document.getElementsByClassName(".html-code");
+//allow user to submit after making changes
 html_code.addEventListener("input", () => {
 console.log("helloworld");
 })
+
 //make sure the submit button can trigger an action to compare the code in both fields to an answer
-// const submitCode = document.querySelector('#submitCode button');
-// submitCode.addEventlistener("click", () => {console.log("code has been submitted:");})
-
-
 let html;
 let css;
-
+let codeObject = { "htmlCode": "", "cssCode":"" };
 
 run = () => {
     // Storing data in Local Storage
@@ -57,43 +75,29 @@ run = () => {
     html = html_code.value;
     css = css_code.value;
 
-    const codeObject = { "htmlCode": "", "cssCode":"" };
     codeObject.htmlCode = html;
     codeObject.cssCode = css;
-    
-    console.log(codeObject);
-    // return codeObject;
+    //user cannot submit if they have not click ono field -- add something to stop user from cliking wihtout typing
+    sub = () => {
+        console.log("This is a test");
+        console.log("this is code object" + codeObject.htmlCode);
+        checkIDE();
+    }
+    // console.log(codeObject);
+   
 }
+
+
 
 //check user answers
 window.addEventListener("load", () => {
     console.log("page loaded");
-
-    const button = document.createElement("Button");
-    button.innerText = "Submit Task"
-    document.getElementById("submitCode").appendChild(button);
-    document.getElementById("markup").innerText = button.outerHTML;
-
-    // const buttonArea = document.getElementById("submitCode");
-    // document.body.insertAdjacentHTML("afterbegin", buttonArea);
-    
 })
-
-// setTimeout(() => {
-//     var submitCode = document.getElementById("submitCode");
-
-//     submitCode.addEventlistener("submit", () => {
-//     console.log("code has been submitted:");
-//     console.log(html);
-//     })
-// , 1000})
-
-
-
 
 // Checking if user is typing anything in input field
 html_code.onkeyup = () => run();
 css_code.onkeyup = () => run();
+
 
 // Accessing data stored in Local Storage. To make it more advanced you could check if there is any data stored in Local Storage.
 html_code.value = localStorage.html_code;
@@ -106,4 +110,25 @@ hintButton.addEventListener("click",  () => {
     console.log("You are requesting a hint");
  })
 
+
+const ideQuestion1 = { 
+    "question": "Adding Element 1", 
+    "correctAns": "<button>Hello World</button>" 
+}
+
+const ideQuestion2 = {
+    "question": "Adding Element 2",
+    "correctAns": ""
+}
+
+const ideQuestion3 = {
+    "question": "Adding Element 3",
+    "correctAns": ""
+}
+
+const ideQuestions = [
+    ideQuestion1,
+    ideQuestion2,
+    ideQuestion3
+]
 
