@@ -15,12 +15,23 @@
 #content, #insert {
     width: 50%;
     height: 100%;
+    padding: 0 1rem;
     overflow: hidden;
-    padding: 1rem;
+}
+
+#insert {
+    background: rgba(255, 235, 205, 0.295);
+    border-left: rgb(255, 241, 221) 5px solid;
+    background-blend-mode: multiply;
 }
 
 .page {
  margin:10vh
+}
+
+/* icon styling */
+.icon-yellow {
+    color: var(--sunset-yellow);
 }
 
 /* layout */
@@ -52,9 +63,6 @@
 /* component utils */
 .container {
     margin: 5vw 15vw;
-    /* margin: 1.2em 1.2em;
-    background-color: white;
-    border: solid 2px black; */
 }
 
 .flex-container {

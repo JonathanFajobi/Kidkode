@@ -1,6 +1,5 @@
 /* global css styling - specific components */
 
-/* IDE */
 :root {
   --violet: #4e55b1;
   --purple: #a8689e;
@@ -14,9 +13,13 @@
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: none;
   scroll-behavior: smooth;
-  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -27,14 +30,15 @@ body {
   position: absolute;
 }
 
+/* Headers */
 header hgroup {
-  margin: 1.2em;
-  padding: 1.2em;
+  margin: 0.8em;
+  padding: 0.8em;
   text-align: left;
   font-weight: bold;
   color: whitesmoke;
   background-color: mediumpurple;
-  border: solid 2px black;
+  border: solid 10px lightgray;
   border-radius: 5px;
 }
 
@@ -60,7 +64,6 @@ header hgroup {
 .buttons img {
   width: 100%;
   height: auto;
-  border: solid 2px black;
 }
 
 /* Style the button and place it at the bottom of the image */
@@ -74,8 +77,8 @@ header hgroup {
   color: whitesmoke;
   font-size: 16px;
   padding: 12px 24px;
-  border: solid 2px black;
   cursor: pointer;
+  border: solid 5px lightgray;
   border-radius: 5px;
   text-align: center;
 }
@@ -90,23 +93,85 @@ header hgroup {
   background-color: mediumpurple;
   color: whitesmoke;
   font-size: 16px;
+  font-weight: bold;
   padding: 12px 24px;
-  border: solid 2px black;
+  border: solid 5px lightgray;
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
 }
 
+
 .backBtn:hover {
   background-color: rgb(77, 22, 129);;
 }
+
+#aboutTitle {
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.gang {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.wholeGang::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.gang img {
+  width: 100%;
+  height: auto;
+}
+
+.gang .name {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: mediumpurple;
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: solid 5px lightgray;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.containerForAboutPage {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-top: 5vw;
+  margin-bottom: 2vw;
+}
+
+.aboutPage p {
+  font-size: 1.5vw;
+}
+
+.aboutPage {
+  margin-left:10vh;
+  margin-right:10vh;
+  margin-top: 10vh;
+}
+
 
 /* Page Design */
 .page p {
   font-size: 1.5vw;
 }
 
-.box {
+.pop-up-box {
   position: absolute;
   top: 20%;
   right: 40%;
@@ -119,7 +184,28 @@ header hgroup {
   min-height: 100px;
   max-height: fit-content;
   padding: 1rem;
-  transition: 2s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.box {
+  position: relative;
+  text-align: left;
+  background-color: white;
+  border-radius: 2vh;
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+  min-width: 100%;
+  min-height: 100%;
+  padding: 1rem;
+}
+
+.question-box img {
+  transition: 0.5s ease-in-out;
+}
+
+.question-box img:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(0.95);
+  color: grey;
 }
 
 
@@ -136,15 +222,14 @@ header hgroup {
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: #fff;
-  border: 1px solid var(--violet);
+  background-color: white;
 }
 
 .code {
   overflow-y: auto;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  background-color: var(--purple);
+  background-color: var(--sunset);
   padding: 0.75rem;
 }
 
@@ -152,11 +237,12 @@ header hgroup {
 .code textarea {
   width: calc(100% - 2rem);
   height: calc(100% - 4rem);
-  background-color: var(--violet);
+  background-color: white;
   color: var(--white);
   padding: 1rem;
   font-size: 1.1rem;
   resize: none;
+  border-radius: 1rem;
 }
 
 #result {
@@ -185,12 +271,12 @@ a {
   min-height: 100%;
 }
 
-#toExcercise {
+/* #toExcercise {
   z-index: 5;
   background-color: var(--blue);
   color: white;
   box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.5);
-}
+} */
 
 /* styling for the quiz elements  */
 .options:hover {
@@ -256,12 +342,27 @@ a {
   }
 }
 /* component styling */
-html {
-  border: none;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-x: none;
+/* main menu */
+#stage1interlude {
+  width: 100%;
+  height: 100%;
+  /* add poster here - note for ralu */
+}
+
+#watermark,
+#aboutButton,
+#startButton {
+  max-width: 30vw;
+  float: right;
+  transition: 1s ease-in-out;
+}
+
+#watermark:hover,
+#aboutButton:hover,
+#startButton:hover {
+  transition: 1s ease-in-out;
+  filter: brightness(0.25);
+  scale: 0.9;
 }
 
 .sideNav {
@@ -298,25 +399,5 @@ html {
   width: 70%;
 }
 
-/* assets styling */
-#stage1interlude {
-  width: 100%;
-  height: 100%;
-  /* add poster here - note for ralu */
-}
+/* IDE */
 
-#watermark,
-#aboutButton,
-#startButton {
-  max-width: 30vw;
-  float: right;
-  transition: 1s ease-in-out;
-}
-
-#watermark:hover,
-#aboutButton:hover,
-#startButton:hover {
-  transition: 1s ease-in-out;
-  filter: brightness(0.25);
-  scale: 0.9;
-}

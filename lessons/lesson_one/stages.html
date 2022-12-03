@@ -1,34 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en-US">
+  <!--<![endif]-->
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Kidkode</title>
     <!-- style and script resources -->
-    <link rel="icon" type="image/x-icon" href="/assets/images/Kidkodelogo.png"/>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/images/Kidkodelogo.png"
+    />
     <link rel="stylesheet" href="/styles/reset.css" media="all" />
     <link rel="stylesheet" href="/styles/index.css" media="all" />
     <link rel="stylesheet" href="/styles/util.css" media="all" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
     <!--meta properties -->
     <meta
-        name="Kidkode"
-        content="Kidkode is a learning application for 10 to 13s teaching html and css"
+      name="Kidkode"
+      content="Kidkode is a learning application for 10 to 13s teaching html and css"
     />
   </head>
-  <body>
+  <body class="grd-background">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <h1>
+      <img src="/assets/images/stages.png" alt="Stages" width="100" />
+    </h1>
+
     <nav>
       <li>
-        <a href="/stage1/introduction.html"><button>Stage 1</button></a>
+        <a href="stage1/introduction.html"
+          ><img src="/assets/images/stage1.png" alt="Stage 1"
+        /></a>
       </li>
       <li>
-        <a href="/stage2/introduction.html"><button>Stage 2</button></a>
+        <a href="stage2/introduction.html"
+          ><img src="/assets/images/stage2.png" alt="Stage 2"
+        /></a>
       </li>
       <li>
-        <a href="/stage3/introduction.html"><button>Stage 3</button></a>
+        <a href="stage3/introduction.html"
+          ><img src="/assets/images/stage3.png" alt="Stage 3"
+        /></a>
       </li>
     </nav>
     <script src="lessonOne.js" async defer></script>
+    <aside style="padding: 80vh; overflow: hidden"></aside>
+
+    <link rel="stylesheet" type="text/css" href="/" media="print" />
+    <script src="animations.js" async defer></script>
   </body>
 </html>
