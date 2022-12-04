@@ -18,55 +18,80 @@
     />
   </head>
   <body>
+
     <header>
       <hgroup>
         <h4>About us</h4>
       </hgroup>
     </header>
-    <main class="containerForAboutPage">
-      <section class="aboutPage">
-        <p id="aboutTitle">Origins</p>
+
+    <main>
+      <section class="aboutPage container">
+        <h5>Origins</h5>
         <p>
           Kidkode is an application created to kickstart the young minds of
           tommorow. We aim to teach and guide users through lessons in a
           walkthrough style approach, giving the user an acutal understanding of
           not just the code, but why the code is what it is.
         </p>
-        <!-- <img src="#">  picture of group member x3 -->
-        <p id="aboutTitle">Meet The Team</p>
-        <div class="gang">
+        <br>
+        <h5>Meet The Team</h5>
+      </section>
+
+      
+  
+      <div class="flex-container flex-row" style="justify-content: center">
+        <div class="gang padding-sm">
           <img
             id="ouafi"
-            src="placeholder/Ouafi.png"
+            src="/assets/images/aboutheader.png"
+              width="200"
+              height="200"
             alt="Ouafi"
           />
           <p class="name">
             Ouafi
           </p>
         </div>
-        <div class="wholeGang">
-          <div class="gang">
+
+          <div class="gang padding-sm">
             <img
               id="ralu"
-              src="placeholder/Ralu.png"
+              src="/assets/images/aboutheader.png"
+              width="200"
+              height="200"
               alt="Ralu"
             />
             <p class="name">
               Ralu
             </p>
           </div>
-          <div class="gang">
+
+          <div class="gang padding-sm">
             <img
               id="shahn"
-              src="placeholder/Shahn.png"
+              src="/assets/images/aboutheader.png"
+              width="200"
+              height="200"
               alt="Shahn"
             />
             <p class="name">
               Shahn
             </p>
           </div>
-      </section>
+        </div>
+
+      <div style="position: absolute; top: 50%; left: 2.5%;">
+        <a href="../index.html">
+          <i
+            class="bi bi-arrow-left-circle-fill icon-yellow"
+            style="font-size: 4rem"
+          ></i>
+        </a>
+      </div>
+        
     </main>
-    <button class="backBtn" onclick="history.back()">Back</button>
+
+
   </body>
 </html>

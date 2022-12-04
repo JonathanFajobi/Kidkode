@@ -12,6 +12,7 @@ const frontend = `
             </div>
             <div>
                 <button id="submitCode" onClick="sub()">Submit Task</button>
+                <i class="bi bi-download icon-white"></i>
             </div>
         </div>
         <iframe id="result"></iframe>

@@ -41,6 +41,10 @@
     color: var(--sunset-yellow);
 }
 
+.icon-white {
+    color: white;
+}
+
 /* layout */
 .padding-sm {
  padding: 5vw;
@@ -88,13 +92,13 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat( 3 / 3fr);
+    grid-template-columns: repeat( 3, 3fr);
     gap: 5px;
 }
 
 .grid-2 {
     display: grid;
-    grid-template-columns: repeat( 2 / 2fr);
+    grid-template-columns: repeat( 2, 2fr);
     gap: 5px;
 }
 
@@ -123,6 +127,8 @@ h6 {
 }
 
 /* media queries */
+
+
 @media (max-width: 600px) {
     .container {
         margin: 5vw 0vw

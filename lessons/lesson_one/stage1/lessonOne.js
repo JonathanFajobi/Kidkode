@@ -1,7 +1,7 @@
 //introduction video
-const next = `
-<a id="toExcercise" href="/lessons/lesson_one/stage1/problem.html">To exercise</a>
-`;
+// const next = `
+// <a id="toExcercise" href="/lessons/lesson_one/stage1/problem.html">To exercise</a>
+// `;
 
 //multiple choice questions
 const form = document.getElementById("form");
@@ -76,7 +76,7 @@ setTimeout(helpText, 20000);
 
 setTimeout(() => {}, 20000);
 
-//give hint onclick
+//open popup
 const hint = document.getElementById("hint");
 hint.addEventListener("click", () => {
   document.getElementById("popup-area").insertAdjacentHTML('afterbegin', popup);
@@ -85,19 +85,19 @@ hint.addEventListener("click", () => {
 
 //may not be needed as if we can alert method 
 const popup = `
-<div class="pop-up-box" id="help">
-  <button id="cross" onclick="toggle()">
-      <i class="bi bi-x-square-fill"></i>
-  </button>
+  <div class="pop-up-box" id="help">
+    <button id="cross" onclick="toggle()">
+        <i class="bi bi-x-square-fill"></i>
+    </button>
     <p>Think about the difference between semantics and actual styling tags</p>
     <p>Try typing in the HTML box on the right hand side to find the answer</p>
-</div>
+  </div>
 `;
 
+//hide popup 
 const toggle = () => {
   const popuparea = document.getElementsByClassName("pop-up-box");
   document.getElementById("popup-area").style.opacity = '0';
-  // cross.remove();
 }
 
 
