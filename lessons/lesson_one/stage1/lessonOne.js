@@ -3,32 +3,6 @@ const next = `
 <a id="toExcercise" href="/lessons/lesson_one/stage1/problem.html">To exercise</a>
 `;
 
-const redirect = () => {
-  console.log("times up mate");
-};
-
-setTimeout(redirect, 20000);
-
-setTimeout(() => {}, 20000);
-
-//give hint onclick
-const hint = document.getElementById("hint");
-hint.addEventListener("click", () => {
-  console.log("running");
-  // document.getElementById("hintarea").insertAdjacentHTML('afterbegin', hint);
-  // document.getElementById("answer2").innerHTML = hint;
-
-  // var value = option.value
-  // console.log(value);
-  // const hint = `
-  //  <audio></audio>
-  //  `
-
-  // if (option.value == "option1"){
-  //     console.log("correct");
-  // }
-});
-
 //multiple choice questions
 const form = document.getElementById("form");
 
@@ -92,3 +66,62 @@ iframe.contentWindow.postMessage(
   '{"event":"command","func":"pauseVideo","args"}',
   "*"
 );
+
+//if the user has spent a long time on the exercise, output a help popup
+const helpText = () => {
+  console.log("times up mate");
+};
+
+setTimeout(helpText, 20000);
+
+setTimeout(() => {}, 20000);
+
+//give hint onclick
+const hint = document.getElementById("hint");
+hint.addEventListener("click", () => {
+  document.getElementById("popup-area").insertAdjacentHTML('afterbegin', popup);
+  document.getElementById("popup-area").style.opacity = '1';
+});
+
+//may not be needed as if we can alert method 
+const popup = `
+<div class="pop-up-box" id="help">
+  <button id="cross" onclick="toggle()">
+      <i class="bi bi-x-square-fill"></i>
+  </button>
+    <p>Think about the difference between semantics and actual styling tags</p>
+    <p>Try typing in the HTML box on the right hand side to find the answer</p>
+</div>
+`;
+
+const toggle = () => {
+  const popuparea = document.getElementsByClassName("pop-up-box");
+  document.getElementById("popup-area").style.opacity = '0';
+  // cross.remove();
+}
+
+
+
+// const popuparea = document.getElementById("popup-area");
+// const cross = document.getElementById("cross");
+// const popupbox = document.getElementById("help");
+
+// cross.addEventListener("click", () => {
+//   console.log("cross");
+//   popupbox.remove();
+//   cross.remove()
+// });
+
+
+// const cross = document.getElementById("cross");
+// cross.addEventListener("click", () => {
+//   console.log("cross");
+//   popupbox.remove();
+//   cross.remove()
+// });
+
+// const target = document.getElementById("target");
+
+// target.addEventListener('click', () => target.style.opacity = '0');
+// // If you want to remove it from the page after the fadeout
+// target.addEventListener('transitionend', () => target.remove());

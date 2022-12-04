@@ -12,6 +12,13 @@
     --sunset-yellow: #f5bd76;
 }
 
+/* for fades in and out */
+#target {
+    height: 100px;
+    background-color: red;
+    transition: opacity 0.5s;
+}
+
 #content, #insert {
     width: 50%;
     height: 100%;
