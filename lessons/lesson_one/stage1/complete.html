@@ -24,33 +24,65 @@
       content="Kidkode is a learning application for 10 to 13s teaching html and css"
     />
   </head>
-  <body>
-    <div class="flex-container flex-row">
-      <aside id="content">
-        <h4>What we covered in this stage</h4>
-        <ul>
-          <li><h6>Stage1</h6></li>
-          <li>How to display a HTML element</li>
-          <li>What is HTML?</li>
-          <li>How to add attributes to a HTML element</li>
-          <!-- audio description of why -->
-          <audio src="ouafi-vibes"></audio>
-        </ul>
-        <a href="../stage2/introduction.html"><button>Next Stage</button></a>
+  <body class="grd-background flex-container flex-row">
+    <div id="content">
+      <a href="/index.html">
+        <img
+          src="/assets/images/Kidkodelogo.png"
+          alt="Main Page"
+          width="50px"
+          style="padding: 0.5rem 0rem"
+        />
+      </a>
+      <h4 class="signika" style="color: white">What we covered:</h4>
+      <aside class="box-fit" style="padding:1rem">
+        <i class="bi bi-question-circle"></i>
+        <h4>HTML: Elements</h4>
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <ul>
+            <li><h6>Stage1</h6></li>
+            <li>How to display a HTML element</li>
+            <li>What is HTML?</li>
+            <li>How to add attributes to a HTML element</li>
+          </ul>
+        </div>
+
+        
+        <a href="../stage2/introduction.html"> 
+          <button class="submit-btn" id="hint" type="button" name="hintbutton" style="margin: 10px 10px">
+            Next Stage
+            Need help?
+        </button>
+        </a>
       </aside>
 
-      <aside>
-        <iframe 
-        id="completion"
-        width="1000"
-        src="https://www.youtube.com/embed/9tlqk6u76RQ?controls=0" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" 
-        allowfullscreen></iframe>
-      </aside>
+      <!-- display when user has passed -->
+      <div id="buttonContainer"></div>
+      <div id="popup-area"></div>
+      <div id="question-area"></div>
+      </div>
+
+      <!-- feedback video here -->
+      <div>
+        <aside>
+          <iframe
+            id="completion"
+            width="1000"
+            height="1000"
+            src="https://www.youtube.com/embed/9tlqk6u76RQ?controls=0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+            allowfullscreen
+          ></iframe>
+        </aside>
+      </div>
     </div>
 
-    <script src="lessonOne.js" type="text/javascript" async defer></script>
+    <!-- if answers are correct show button to go to next stage  -->
+    <script src="/js/localState.js"></script>
+    <script src="lessonOne.js"></script>
+    <script src="../../ide.js"></script>
   </body>
 </html>

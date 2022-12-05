@@ -2,33 +2,34 @@ const frontend = `
 <main id="ideBody">
     <div class="code-editor">
         <div class="code grd-background">
+
             <div class="html-code">
-                <h6>HTML</h6>
+                <h6 class="signika" style="color: white">HTML</h6>
                 <textarea id="html"></textarea>
             </div>
+
             <div class="css-code">
-                <h6>CSS</h6>
+                <h6 class="signika" style="color: white">CSS</h6>
                 <textarea id="css"></textarea>
             </div>
-            <div>
-                <button id="submitCode" onClick="sub()">Submit Task</button>
-                <i class="bi bi-download icon-white"></i>
-            </div>
+
+            <span class="submit-btn signika" style="display: inline;">
+              <i class="bi bi-check2-square"></i>
+              <input id="submitCode" type="submit" onClick="sub()">Submit Task</input>
+            </span>
+
+            <span class="submit-btn signika" style="display: inline;">
+              <i class="bi bi-download"></i>
+              <input id="submit" type="button">Download code</input>
+            </span>
         </div>
         <iframe id="result"></iframe>
     </div>
 </main>
 `;
 
-const idetask1 = `
-<div>
-    <h5>Create a button over here</h5> <i class="bi bi-arrow-right-square-fill"></i>
-    <p>When you think you have done it correctly, click the submit code button</p>
-</div>
-`;
-
 checkIDE = () => {
-  console.log("submitted");
+  console.log("Submitted");
 
   var userAnswer = html_code.value;
   console.log(userAnswer);
@@ -54,7 +55,7 @@ const result = document.querySelector("#result");
 
 //allow user to submit after making changes
 html_code.addEventListener("input", () => {
-  console.log("helloworld");
+  console.log("Updated");
 });
 
 //make sure the submit button can trigger an action to compare the code in both fields to an answer
@@ -77,13 +78,12 @@ run = () => {
 
   codeObject.htmlCode = html;
   codeObject.cssCode = css;
+
   //user cannot submit if they have not click ono field -- add something to stop user from cliking wihtout typing
   sub = () => {
-    console.log("This is a test");
-    console.log("this is code object" + codeObject.htmlCode);
+    console.log("Logged:" + codeObject.htmlCode);
     checkIDE();
   };
-  // console.log(codeObject);
 };
 
 //check user answers
@@ -100,11 +100,22 @@ html_code.value = localStorage.html_code;
 css_code.value = localStorage.css_code;
 
 //ide questions
-var hintButton = document.getElementById("hint");
+const ideTask1 = `
+<div>
+    <h5>Create a button over here</h5> <i class="bi bi-arrow-right-square-fill"></i>
+    <p>When you think you have done it correctly, click the submit code button</p>
+</div>
+`;
 
-hintButton.addEventListener("click", () => {
-  console.log("You are requesting a hint");
-});
+// const ideTask = `
+//   <div class="pop-up-box" id="help">
+//     <button id="cross" onclick="toggle()">
+//         <i class="bi bi-x-square-fill"></i>
+//     </button>
+//     <h5>Create a button over here</h5> <i class="bi bi-arrow-right-square-fill"></i>
+//     <p>When you think you have done it correctly, click the submit code button</p>
+//   </div>
+// `;
 
 const ideQuestion1 = {
   question: "Adding Element 1",
@@ -122,3 +133,12 @@ const ideQuestion3 = {
 };
 
 const ideQuestions = [ideQuestion1, ideQuestion2, ideQuestion3];
+
+// //open popup question
+// const popupTask = document.getElementById("question-area");
+// popupTask.addEventListener("click", () => {
+//   console.log("output");
+//   document.getElementById("question-area").insertAdjacentHTML('afterbegin', ideTask);
+//   document.getElementById("question-area").style.opacity = '1';
+// });
+

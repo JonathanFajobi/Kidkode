@@ -1,8 +1,3 @@
-//introduction video
-// const next = `
-// <a id="toExcercise" href="/lessons/lesson_one/stage1/problem.html">To exercise</a>
-// `;
-
 //multiple choice questions
 const form = document.getElementById("form");
 
@@ -28,6 +23,18 @@ const question3 = {
 
 const questions = [question1, question2, question3];
 
+
+//ide questions 
+const ideTask = `
+  <div class="pop-up-box" id="question">
+    <button id="cross" onclick="toggleQuestion()">
+        <i class="bi bi-x-square-fill"></i>
+    </button>
+    <h5>Create a button over here <i class="bi bi-arrow-right-square-fill" style="font-size:50%"></i></h5> 
+    <p>When you think you have done it correctly, click the submit code button</p>
+  </div>
+`;
+
 const buttonGroup = `
 <a href="../stages.html">
     <button>Pick a stage!</button>
@@ -49,7 +56,7 @@ checkCorrect = () => {
     console.log("correct answer");
     alert("correct answer");
     document.getElementById("buttonContainer").innerHTML = buttonGroup;
-    document.getElementById("ideQContainer").innerHTML = idetask1;
+    document.getElementById("question-area").innerHTML = ideTask;
   } else if (userAnswer == null) {
     alert("You need to select an answer");
   } else {
@@ -100,25 +107,11 @@ const toggle = () => {
   document.getElementById("popup-area").style.opacity = '0';
 }
 
-
-
-// const popuparea = document.getElementById("popup-area");
-// const cross = document.getElementById("cross");
-// const popupbox = document.getElementById("help");
-
-// cross.addEventListener("click", () => {
-//   console.log("cross");
-//   popupbox.remove();
-//   cross.remove()
-// });
-
-
-// const cross = document.getElementById("cross");
-// cross.addEventListener("click", () => {
-//   console.log("cross");
-//   popupbox.remove();
-//   cross.remove()
-// });
+//hide question pop up
+const toggleQuestion = () => {
+  const popuparea = document.getElementsByClassName("pop-up-box");
+  document.getElementById("question-area").style.opacity = '0';
+}
 
 // const target = document.getElementById("target");
 

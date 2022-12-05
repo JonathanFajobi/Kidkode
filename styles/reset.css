@@ -5,3 +5,11 @@
 	border: 0;
 	list-style-type: none;
 }
+
+input[type=submit] {
+	background-color: none;
+	border: none;
+	all:unset;
+	padding: 1rem;
+	transition: 0.35 ease-out
+}
