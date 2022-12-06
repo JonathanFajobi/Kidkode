@@ -81,12 +81,7 @@ a {
   cursor: pointer;
 }
 
-/* image styling */
-.code-snippet {
-  width: 25%;
-  border-radius: 1rem;
-  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
-}
+
 
 /* video elements */
 #stage1interlude {
@@ -101,6 +96,9 @@ a {
 #completion {
   max-width: 100%;
   min-height: 100%;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: var(--orange) 3px solid;
 }
 
 #question-video {
@@ -169,6 +167,12 @@ a {
 
 /* component styling */
 /* main menu */
+#stage-icon {
+  position: relative;
+  width: 200px;
+  transition: 1s ease-in-out;
+}
+
 #stage1interlude {
   width: 100%;
   height: 100%;
@@ -182,6 +186,7 @@ a {
   transition: 1s ease-in-out;
 }
 
+#stage-icon:hover,
 #watermark:hover,
 #aboutButton:hover,
 #startButton:hover {
@@ -280,7 +285,7 @@ header hgroup {
 
 .buttons .btn:hover {
   transition: 0.2s ease-in-out;
-  filter: opacity(0.85);
+  filter: brightness(0.6);
   box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -384,6 +389,26 @@ header hgroup {
   transition: 1s ease-in-out;
 }
 
+
+.pop-up-box-2 {
+  /* position: absolute;
+  top: 25%;
+  right: 20%; */
+  position: relative;
+  text-align: left;
+  background-color: white;
+  border-radius: 2vh;
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+  min-width: calc(100px + 10vw);
+  max-width: fit-content;
+  min-height: 100px;
+  max-height: fit-content;
+  padding: 1rem;
+  transition: 1s ease-in-out;
+}
+
+
+
 .box {
   position: relative;
   text-align: left;
@@ -406,7 +431,6 @@ header hgroup {
   padding: 1rem;
 }
 
-
 .question-box {
   position: relative;
   text-align: left;
@@ -425,4 +449,59 @@ header hgroup {
   background-color: var(--sunset);
   color: grey;
 }
+
+ul .finished {
+  padding: 1rem;
+}
+
+/* introduction components */
+
+/* image styling */
+.code-snippet-1 {
+  width: 25%;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 35%;
+  right: 68.5%;
+}
+
+.code-snippet-2 {
+  width: 15%;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 25%;
+  right: 70%;
+}
+
+.code-snippet-3 {
+  width: 15%;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 75%;
+  right: 60%;
+}
+
+#intro-box {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
+#instruction-area {
+  transition: 1s ease-in-out;
+  background-color: rgba( 0, 0, 0, 0.34);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
 

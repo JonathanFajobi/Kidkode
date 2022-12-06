@@ -24,6 +24,31 @@ const question3 = {
 const questions = [question1, question2, question3];
 
 
+//lesson one instructions 
+const instruction = `
+<div class="pop-up-box-2" id="help">
+  <span>
+    <button id="cross" onclick="toggleIns()">
+        <i class="bi bi-x-square-fill"></i>
+    </button>
+    <h5 class="signika">Instructions</h5>
+  </span>
+
+  <ul style="font-size: 20px; list-style-type: circle;">
+    <li>Play the video, there will be a walkthrough of each question</li>
+    <li>Atfer watching the video, answer the multiple choice question</li>
+    <li>If you are having problems getting the right answer, right in the box labelled html to test each option!</li>
+    <li>After getting one question correct, another question will popup</li>
+    <li>If you are really struggling, press the need help button for a hint!</li>
+    <li><b>
+      Dont try and cheat either!
+      You have to type in the box yourself before answering a question - otherwise it wont work
+     </b></li>
+  </ul>
+  
+</div>
+`;
+
 //ide questions 
 const ideTask = `
   <div class="pop-up-box" id="question">
@@ -74,9 +99,17 @@ iframe.contentWindow.postMessage(
   "*"
 );
 
+
+//inform user on what not to do, and why they wont get feedback if tehy do that
+window.addEventListener("load", () => {
+  document.getElementById("instruction-area").insertAdjacentHTML('afterbegin', instruction);
+  document.getElementById("instruction-area").style.opacity = '1';
+});
+
+
 //if the user has spent a long time on the exercise, output a help popup
 const helpText = () => {
-  console.log("times up mate");
+  console.log("Output Help Message");
 };
 
 setTimeout(helpText, 20000);
@@ -111,6 +144,12 @@ const toggle = () => {
 const toggleQuestion = () => {
   const popuparea = document.getElementsByClassName("pop-up-box");
   document.getElementById("question-area").style.opacity = '0';
+}
+
+//hide instructions
+const toggleIns = () => {
+  const instructionArea = document.getElementsByClassName("pop-up-box-2");
+  document.getElementById("instruction-area").style.opacity = '0';
 }
 
 // const target = document.getElementById("target");

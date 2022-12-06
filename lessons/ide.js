@@ -86,11 +86,6 @@ run = () => {
   };
 };
 
-//check user answers
-window.addEventListener("load", () => {
-  console.log("page loaded");
-});
-
 // Checking if user is typing anything in input field
 html_code.onkeyup = () => run();
 css_code.onkeyup = () => run();
@@ -107,15 +102,7 @@ const ideTask1 = `
 </div>
 `;
 
-// const ideTask = `
-//   <div class="pop-up-box" id="help">
-//     <button id="cross" onclick="toggle()">
-//         <i class="bi bi-x-square-fill"></i>
-//     </button>
-//     <h5>Create a button over here</h5> <i class="bi bi-arrow-right-square-fill"></i>
-//     <p>When you think you have done it correctly, click the submit code button</p>
-//   </div>
-// `;
+
 
 const ideQuestion1 = {
   question: "Adding Element 1",
@@ -141,4 +128,3 @@ const ideQuestions = [ideQuestion1, ideQuestion2, ideQuestion3];
 //   document.getElementById("question-area").insertAdjacentHTML('afterbegin', ideTask);
 //   document.getElementById("question-area").style.opacity = '1';
 // });
-
