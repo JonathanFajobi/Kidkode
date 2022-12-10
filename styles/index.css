@@ -94,16 +94,19 @@ a {
 }
 
 #completion {
-  max-width: 100%;
-  min-height: 100%;
+  /* max-width: 100%; */
+  width: 40vw;
+  min-height: 100vh;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
-  border: var(--orange) 3px solid;
+  border-top-right-radius: 1rem;
+  border: var(--orange) 10px solid;
 }
 
 #question-video {
   border-radius: 1rem;
-
+  width: 80%;
+  height: 400px;
 }
 
 /* background styling */

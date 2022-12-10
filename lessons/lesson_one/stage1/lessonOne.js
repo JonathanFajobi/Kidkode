@@ -90,18 +90,9 @@ checkCorrect = () => {
   }
 };
 
-//respond when video ends
-// let video = document.getElementById("introToHTML").addEventListener('ended', onChange, false);
-
-let iframe = document.querySelector("#testvideo iframe");
-iframe.contentWindow.postMessage(
-  '{"event":"command","func":"pauseVideo","args"}',
-  "*"
-);
-
-
 //inform user on what not to do, and why they wont get feedback if tehy do that
 window.addEventListener("load", () => {
+  document.getElementById("hint").disabled = true;
   document.getElementById("instruction-area").insertAdjacentHTML('afterbegin', instruction);
   document.getElementById("instruction-area").style.opacity = '1';
 });
@@ -119,7 +110,8 @@ setTimeout(() => {}, 20000);
 //open popup
 const hint = document.getElementById("hint");
 hint.addEventListener("click", () => {
-  document.getElementById("popup-area").insertAdjacentHTML('afterbegin', popup);
+  // document.getElementById("popup-area").insertAdjacentHTML('afterbegin', popup);
+  document.getElementById("popup-area").innerHTML = popup;
   document.getElementById("popup-area").style.opacity = '1';
 });
 
@@ -142,14 +134,39 @@ const toggle = () => {
 
 //hide question pop up
 const toggleQuestion = () => {
+  console.log("button has been clicked");
   const popuparea = document.getElementsByClassName("pop-up-box");
   document.getElementById("question-area").style.opacity = '0';
+  
+  //create a button element here so user can reopen the question
+  
 }
+
+var ideQButton = document.createElement("button");
+  ideQButton.innerHTML = "Show Question";
+  ideQButton.setAttribute("class", "submit-btn");
+  document.getElementById("showQuestion").appendChild(ideQButton);
+  ideQButton.disabled = true;
+  ideQButton.style.opacity = '1';
+  console.log("Destroyed");
+//add funcitonality to button to allow the user to bring up the ide question 
+// ideQButton.addEventListener("click", () => {
+//   console.log("Hello world");
+// });
+
+ideQButton.onclick = function() {
+  console.log("Hello world");
+}
+
 
 //hide instructions
 const toggleIns = () => {
   const instructionArea = document.getElementsByClassName("pop-up-box-2");
-  document.getElementById("instruction-area").style.opacity = '0';
+  const area = document.getElementById("instruction-area");
+  area.style.opacity = '0';
+  //remove the element after it has been faded out 
+  area.addEventListener('transitionend', () => area.remove());
+
 }
 
 // const target = document.getElementById("target");

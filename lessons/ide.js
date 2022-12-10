@@ -20,7 +20,7 @@ const frontend = `
 
             <span class="submit-btn signika" style="display: inline;">
               <i class="bi bi-download"></i>
-              <input id="submit" type="button">Download code</input>
+              <input id="submit" type="button" onClick="downloadFile()">Download code</input>
             </span>
         </div>
         <iframe id="result"></iframe>
@@ -37,13 +37,13 @@ checkIDE = () => {
 
   if (userAnswer == ideQuestions[0].correctAns) {
     console.log("correct answer");
-    alert("correct answer");
+    alert("Correct answer");
     window.location.replace("complete.html");
   } else if (userAnswer == null) {
     alert("You need to select an answer");
   } else {
     console.log("incorrect");
-    alert("incorrect");
+    alert("Incorrect");
   }
 };
 
@@ -86,7 +86,30 @@ run = () => {
   };
 };
 
-// Checking if user is typing anything in input field
+// downloadFile = () => {
+//   e.preventDefault();
+//   console.log("Downloading File")
+//   const filename = "Kidkode-exercise.html";
+//   const content = html + css;
+  
+//   const blob = new Blob([content], { type: 'plain/text' });
+//   const fileUrl = URL.createObjectURL(blob);
+
+//    //setAttribute() Sets the value of an attribute on the specified element.
+//    element.setAttribute('href', fileUrl); //file location
+//    element.setAttribute('download', filename); // file name
+//    element.style.display = 'none';
+
+//      //use appendChild() method to move an element from one element to another
+//   document.body.appendChild(element);
+//   element.click();
+  
+//   //The removeChild() method of the Node interface removes a child node from the DOM and returns the removed node
+//   document.body.removeChild(element);
+
+// }
+
+// If user has typed in textarea
 html_code.onkeyup = () => run();
 css_code.onkeyup = () => run();
 
@@ -101,8 +124,6 @@ const ideTask1 = `
     <p>When you think you have done it correctly, click the submit code button</p>
 </div>
 `;
-
-
 
 const ideQuestion1 = {
   question: "Adding Element 1",

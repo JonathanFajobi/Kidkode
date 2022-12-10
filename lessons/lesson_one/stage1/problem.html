@@ -18,16 +18,20 @@
     />
   </head>
 <!-- insert popup instruction here -->
-  <!-- <div id="instruction-area"></div> -->
+  <div id="instruction-area"></div>
   <body class="grd-background flex-container flex-row">
     <div id="content">
-      <a href="/index.html" >
-        <img src="/assets/images/Kidkodelogo.png" alt="Main Page" width="50px" style="padding: 0.5rem 0rem">
-      </a>
-      <h4 class="signika" style="color: white;">Walkthrough</h4>
+      <div style=" display: flex; flex-direction: row; flex-wrap: nowrap;">
+        <a href="/index.html" >
+          <img style="padding: 1.4rem 1.4rem 0rem 0rem;" src="/assets/images/Kidkodelogo.png" alt="Main Page" width="50px" >
+        </a>
+        <h5 class="signika" style="color: white;">Walkthrough</h5>
+      </div>
+     
+     
 
-      <div id="testvideo">
-        <iframe 
+      <div>
+        <iframe
         id="question-video"
         src="https://www.youtube.com/embed/mCBvEt_Usqc?controls=0" 
         title="YouTube video player" 
@@ -37,7 +41,7 @@
       </div>
 
       <!-- put question from video here so user does not have to replay the video -->
-      <h5 class="signika" style="color: white;">Video Question</h5>
+      <!-- <h5 class="signika" style="color: white;">Video Question</h5> -->
 
       <div class="box">
         <i class="bi bi-question-circle"></i>
@@ -73,18 +77,21 @@
        
       </form>
     </div>
+    
       <!-- display when user has passed -->
       <div id="buttonContainer"></div>
       <!-- <div id="ideQContainer"></div> -->
       <div id="popup-area"></div>
       <div id="question-area"></div>
       
-      
+      <div class="flex-container flex-row">
         <button class="submit-btn" id="hint" type="button" name="hintbutton" style="margin: 10px 10px">
           <i class="bi bi-lightbulb"></i>
           Need help?
         </button>
 
+        <div id="showQuestion" style="margin: 1rem;"></div>
+      </div>
     </div>
 
 
