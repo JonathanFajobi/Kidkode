@@ -34,7 +34,7 @@ const instruction = `
     <h5 class="signika">Instructions</h5>
   </span>
 
-  <ul id="help-list" style="font-size: 20px">
+  <ul style="font-size: 20px">
     <li>Play the video, there will be a walkthrough of each question</li>
     <li>Atfer watching the video, answer the multiple choice question</li>
     <li>If you are struggling, write in the box labelled html to test each option!</li>

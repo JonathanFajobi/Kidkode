@@ -1,7 +1,3 @@
-const html_code = document.querySelector(".html-code textarea");
-const css_code = document.querySelector(".css-code textarea");
-const result = document.querySelector("#result");
-
 const frontend = `
 <main id="ideBody">
     <div class="code-editor">
@@ -33,30 +29,36 @@ const frontend = `
 </main>
 `;
 
+document.getElementById("insert").innerHTML = frontend;
+
+const html_code = document.querySelector(".html-code textarea");
+const css_code = document.querySelector(".css-code textarea");
+const result = document.querySelector("#result");
+
 checkIDE = () => {
   console.log("Submitted");
 
   var userAnswer = html_code.value;
   var compare = userAnswer.toLowerCase();
-  console.log(userAnswer);
+  console.log(compare);
   console.log(ideQuestions[0].correctAns);
 
-  if (userAnswer == ideQuestions[0].correctAns) {
+  if (compare == ideQuestions[0].correctAns) {
     alert("Correct answer");
     window.location.replace("complete.html");
-  } else if (userAnswer == null) {
+  } else if (compare == null) {
     alert("You need to select an answer");
   } else {
     alert("Incorrect");
   }
 };
 
-document.getElementById("insert").innerHTML = frontend;
 
 //allow user to submit after making changes
 html_code.addEventListener("input", () => {
   console.log("Updated");
 });
+
 
 //make sure the submit button can trigger an action to compare the code in both fields to an answer
 let html;
@@ -68,8 +70,7 @@ run = () => {
   localStorage.setItem("css_code", css_code.value);
 
   // execute html + css
-  result.contentDocument.body.innerHTML =
-    `<style>${localStorage.css_code}</style>` + localStorage.html_code;
+  result.contentDocument.body.innerHTML = `<style>${localStorage.css_code}</style>` + localStorage.html_code;
 
   html = html_code.value;
   css = css_code.value;
@@ -100,7 +101,7 @@ const ideQuestion1 = {
 let link = "https://www.google.com";
 const ideQuestion2 = {
   question: "Adding Element 2",
-  correctAns: "<a href={link}>google</button>",
+  correctAns: "<a href=>google</button>",
 };
 
 const ideQuestion3 = {
