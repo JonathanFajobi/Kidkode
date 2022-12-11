@@ -17,34 +17,35 @@
       content="Kidkode is a learning application for 10 to 13s teaching html and css"
     />
   </head>
+
 <!-- insert popup instruction here -->
   <div id="instruction-area"></div>
+
   <body class="grd-background flex-container flex-row">
     <div id="content">
-      <div style=" display: flex; flex-direction: row; flex-wrap: nowrap;">
+      <div style=" display: flex; flex-direction: row; flex-wrap: nowrap; padding: 1rem ;">
         <a href="/index.html" >
-          <img style="padding: 1.4rem 1.4rem 0rem 0rem;" src="/assets/images/Kidkodelogo.png" alt="Main Page" width="50px" >
+          <img  src="/assets/images/Kidkodelogo.png" alt="Main Page" width="50px" >
         </a>
-        <h5 class="signika" style="color: white;">Walkthrough</h5>
+        <h5 class="signika" style="color: white; margin-left: 10px;">Walkthrough</h5>
       </div>
-     
-     
 
       <div>
-        <iframe
+        <iframe 
         id="question-video"
-        src="https://www.youtube.com/embed/mCBvEt_Usqc?controls=0" 
-        title="YouTube video player" 
+        src="https://www.youtube.com/embed/hIg5Ai4fzhw" 
+        title="Question Video" 
         frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen></iframe>
       </div>
 
-      <!-- put question from video here so user does not have to replay the video -->
-      <!-- <h5 class="signika" style="color: white;">Video Question</h5> -->
-
       <div class="box">
-        <i class="bi bi-question-circle"></i>
+        <div style="display: flex; flex-direction: row;">
+          <i class="bi bi-question-circle"></i>
+          <p style="margin-left: 0.5rem;">Question 1</p>
+        </div>
+       
       <form id="form" action="" method="">
         <ul id="answers">
           <li class="question-box">
@@ -79,28 +80,39 @@
     </div>
     
       <!-- display when user has passed -->
-      <div id="buttonContainer"></div>
-      <!-- <div id="ideQContainer"></div> -->
       <div id="popup-area"></div>
       <div id="question-area"></div>
       
       <div class="flex-container flex-row">
+
         <button class="submit-btn" id="hint" type="button" name="hintbutton" style="margin: 10px 10px">
           <i class="bi bi-lightbulb"></i>
           Need help?
         </button>
 
-        <div id="showQuestion" style="margin: 1rem;"></div>
+        <div id="showQuestion" >
+        </div>
+
+        <!-- display when user has passed -->
+        <div id="buttonContainer"></div>
+        
+        <button class="submit-btn" id="showQ" type="button" name="questionbutton" style="margin: 10px 10px">
+          <i class="bi bi-lightbulb"></i>
+          Show Question 2
+        </button>
+
+        <button class="submit-btn" id="showQ" type="button" name="questionbutton" style="margin: 10px 10px" onclick="history.back()">
+          <i class="bi bi-lightbulb"></i>
+          Back to Introduction
+        </button>
+
       </div>
     </div>
-
-
 
     <!-- insert ide here -->
     <div id="insert"></div>
     
     <!-- if answers are correct show button to go to next stage  -->
-    <script src="/js/localState.js"></script>
     <script src="lessonOne.js"></script>
     <script src="../../ide.js"></script>
   </body>

@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KidKode</title>
     <!-- style and script resources -->
-    <link rel="icon" type="image/x-icon" href="/assets/images/Kidkodelogo.png"/>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/images/Kidkodelogo.png"
+    />
     <link rel="stylesheet" href="/styles/reset.css" media="all" />
     <link rel="stylesheet" href="/styles/index.css" media="all" />
     <link rel="stylesheet" href="/styles/util.css" media="all" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
     <!--meta properties -->
     <meta
       name="Kidkode"
@@ -18,57 +25,67 @@
     />
   </head>
   <body>
-
     <header>
-      <hgroup style="padding:0">
-        <h4 class="signika grd-background" style="padding: 0.25em;" >Help</h4>
+      <hgroup style="padding: 0">
+        <h4 class="signika grd-background" style="padding: 0.25em">Help</h4>
       </hgroup>
     </header>
 
     <main>
-      <section class="aboutPage container">
+      <section class="container">
         <h5 class="signika">Documentation</h5>
-        <p>
+        <br>
+        <hr>
+        <main style="font-size: 1.25vw;">
+          <p>
             This application was created with the intention of helping the users
-            achieve a good of learning as fast as possible. To make use of the app 
-            correctly please read the full documentation below. 
-        </p>
-
-        <p>
-            First of all, whenever answering questions make sure to answer the multiple
-            choice questions, before the IDE quesiton. You can use it to work out or try 
-            solutions. But remember - always work out the multiple choice question first. 
+            learn as fast as possible. To make use of the app
+            correctly please read the full documentation below.
+          </p>
         <br>
-            If you need help during an exercise then be sure to click the need help button.
-            This should give help
-        </p>
-
-        <p>
-            Try to tackle stages and lessons in a chronological order. This will ensure that you do 
-        </p>
+          <p>
+            First of all, whenever answering questions make sure to answer the
+            multiple choice questions, before the IDE quesiton. You can use it to
+            work out or try solutions. 
+            <br />
+            But remember - always work out the multiple
+            choice question first.
+            <br />
+            If you need help during an exercise, click the <i>need help</i> button. This 
+            should make it a little bit easier for you. 
+          </p>
         <br>
+          <p>
+            Try to tackle stages and lessons in a chronological order. This will
+            ensure that you have the prior knowledge required. 
+          </p>
+          <br />
+      </main>
         <h5 class="signika">How to use this application</h5>
 
-        <ul style="list-style:circle;">
-          <li>Make sure to read pop ups - these contain the most useful information</li>
-          <li>You can utilise the code editor on the right hand side to test out mulitple choice answers</li>
+        <ul id="help-list">
+          <li>
+            Make sure to read pop ups - these contain the most useful
+            information
+          </li>
+          <li>
+            You can utilise the code editor on the right hand side to test out
+            mulitple choice answers
+          </li>
+          <li>
+            Use arrow buttons to go to the next or previous page
+          </li>
         </ul>
       </section>
 
-     
-
-
-      <div style="position: absolute; top: 50%; left: 2.5%;">
+      <div style="position: absolute; top: 50%; left: 2.5%">
         <a href="../index.html">
           <i
-            class="bi bi-arrow-left-circle-fill icon-yellow"
+            class="bi bi-arrow-left-circle-fill icon-yellow arrow-button"
             style="font-size: 4rem"
           ></i>
         </a>
       </div>
-        
     </main>
-
-
   </body>
 </html>

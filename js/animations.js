@@ -1,1 +1,0 @@
-//if window frame not on 15.6 inch screen, remove the picture 

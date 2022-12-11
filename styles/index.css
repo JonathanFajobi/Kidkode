@@ -1,14 +1,6 @@
 /* global css styling - specific components */
 @import url("/styles/util.css");
 
-:root {
-  --violet: #4e55b1;
-  --purple: #a8689e;
-  --orange: #e9927c;
-  --yellow: #f5bd76;
-  --white: white;
-}
-
 html {
   border: none;
   margin: 0;
@@ -27,61 +19,9 @@ body {
   position: absolute;
 }
 
-/* IDE */
-#ideBody {
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.code-editor {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background-color: white;
-  
-}
-
-.code {
-  overflow-y: auto;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  background-color: none;
-  padding: 0.75rem;
-  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
-}
-
-.code textarea {
-  width: calc(100% - 2rem);
-  height: calc(100% - 4rem);
-  background-color: white;
-  padding: 1rem;
-  font-size: 1.1rem;
-  resize: none;
-  border-radius: 1rem;
-  transition: 1s ease-in-out;
-}
-
-.code textarea:focus {
-  transition: 1s ease-in-out;
-  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
-}
-
-
-#result {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
 a {
   cursor: pointer;
 }
-
-
 
 /* video elements */
 #stage1interlude {
@@ -94,7 +34,6 @@ a {
 }
 
 #completion {
-  /* max-width: 100%; */
   width: 40vw;
   min-height: 100vh;
   border-top-left-radius: 1rem;
@@ -105,16 +44,16 @@ a {
 
 #question-video {
   border-radius: 1rem;
-  width: 80%;
+  width: 100%;
   height: 400px;
 }
 
 /* background styling */
 #startBackground {
-  background: url("/assets/startscreenbg.png");
+  background: url("/assets/images/startscreenbg.png");
   background-position: 100% 0%;
   background-repeat: no-repeat;
-  background-attachment:local;
+  background-attachment: local;
   background-size: 100%;
   z-index: -1;
 }
@@ -122,11 +61,10 @@ a {
 .grd-background {
   background: linear-gradient(
     145deg,
-    #4e55b1,
-    #a8689e,
-    #e9927c,
-    #e9927c,
-    #f5bd76
+    var(--purple),
+    var(--violet),
+    var(--sunset-orange),
+    var(--sunset-yellow)
   );
   background-size: 1000% 1000%;
   -webkit-animation: gradient-background 22s ease infinite;
@@ -231,7 +169,73 @@ a {
   width: 70%;
 }
 
-/* Headers --------------------------------------------*/ 
+#summary {
+  font-size: calc(10px + 1.25vw);
+}
+
+#logo {
+  width: 15%;
+  height: 15%;
+}
+
+#lessonIndexTitle{
+  width: 40vw;
+}
+
+/* IDE */
+#ideBody {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.code-editor {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: white;
+}
+
+.code {
+  overflow-y: auto;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  background-color: none;
+  padding: 0.75rem;
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.code textarea {
+  width: calc(100% - 2rem);
+  height: calc(100% - 4rem);
+  background-color: white;
+  padding: 1rem;
+  font-size: 1.1rem;
+  resize: none;
+  border-radius: 1rem;
+  transition: 1s ease-in-out;
+}
+
+.code textarea:focus {
+  transition: 1s ease-in-out;
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+#result {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#htmlBasics {
+  min-width: 200px
+}
+
+
+/* Headers --------------------------------------------*/
 header hgroup {
   margin: 0.8em;
   padding: 0.8em;
@@ -247,7 +251,8 @@ header hgroup {
 .buttons {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 700px;
+  min-width: 200px;
   margin: 2em;
   float: left;
   width: 33.33%;
@@ -292,36 +297,12 @@ header hgroup {
   box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* .backBtn {
-  margin-left: 2em;
-  margin-top: 2em;
-  background-color: mediumpurple;
-  color: whitesmoke;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 12px 24px;
-  border: solid 5px lightgray;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.backBtn:hover {
-  background-color: rgb(77, 22, 129);
-} */
-
 .card {
   position: relative;
   max-width: 250px;
   margin: 1rem;
   float: left;
 }
-
-/* .wholeGang::after {
-  content: "";
-  clear: both;
-  display: table;
-} */
 
 .card img {
   position: relative;
@@ -347,13 +328,6 @@ header hgroup {
   text-align: center;
 }
 
-/* .containerForAboutPage {
-  margin-left: 15vw;
-  margin-right: 15vw;
-  margin-top: 5vw;
-  margin-bottom: 2vw;
-} */
-
 .submit-btn {
   background-color: none;
   padding: 0.45rem;
@@ -368,11 +342,21 @@ header hgroup {
   box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
+.arrow-button {
+  transition: 0.5s ease-in-out;
+}
+
+.arrow-button:hover {
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  color: black;
+}
+
 .disabled {
   pointer-events: none;
   cursor: not-allowed;
   opacity: 0.5;
-  filter: brightness(0.1), alpha(opacity=95),;
+  filter: brightness(0.1), alpha(opacity=95);
   box-shadow: none;
 }
 
@@ -392,11 +376,7 @@ header hgroup {
   transition: 1s ease-in-out;
 }
 
-
 .pop-up-box-2 {
-  /* position: absolute;
-  top: 25%;
-  right: 20%; */
   position: relative;
   text-align: left;
   background-color: white;
@@ -409,8 +389,6 @@ header hgroup {
   padding: 1rem;
   transition: 1s ease-in-out;
 }
-
-
 
 .box {
   position: relative;
@@ -448,7 +426,7 @@ header hgroup {
 
 .question-box:hover {
   transition: 0.5s ease-in-out;
-  transform: scale(0.95);
+  transform: scale(0.98);
   background-color: var(--sunset);
   color: grey;
 }
@@ -495,7 +473,7 @@ ul .finished {
 
 #instruction-area {
   transition: 1s ease-in-out;
-  background-color: rgba( 0, 0, 0, 0.34);
+  background-color: rgba(0, 0, 0, 0.34);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -505,6 +483,8 @@ ul .finished {
   display: flex;
   justify-content: center;
   align-items: center;
-} 
+}
 
-
+#help-list li {
+  list-style-type: circle
+}

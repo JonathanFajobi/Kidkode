@@ -1,138 +1,147 @@
 /* use this file for utility classes (simple classes used to build up css) */
-@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;500;700&display=swap");
 .signika {
-    font-family: 'Signika Negative', sans-serif;
+  font-family: "Signika Negative", sans-serif;
 }
 
 :root {
-    --white: #000;
-    --purple: #4e55b1;
-    --violet: #a8689e;
-    --sunset-orange: #e9927c;
-    --sunset-yellow: #f5bd76;
+  --white: #000;
+  --purple: #4e55b1;
+  --violet: #a8689e;
+  --sunset-orange: #e9927c;
+  --sunset-yellow: #f5bd76;
 }
 
-/* for fades in and out */
-#target {
-    height: 100px;
-    background-color: red;
-    transition: opacity 0.5s;
-}
-
-#content, #insert {
-    width: 50%;
-    height: 100%;
-    padding: 0 1rem;
-    overflow: hidden;
+#content,
+#insert {
+  width: 50%;
+  height: 100%;
+  padding: 0 1rem;
+  overflow: hidden;
 }
 
 #insert {
-    background: rgba(255, 235, 205, 0.295);
-    border-left: rgb(255, 241, 221) 5px solid;
-    background-blend-mode: multiply;
+  background: rgba(255, 235, 205, 0.295);
+  border-left: rgb(255, 241, 221) 5px solid;
+  background-blend-mode: multiply;
 }
 
 .page {
- margin:10vh
+  margin: 10vh;
 }
 
 /* icon styling */
 .icon-yellow {
-    color: var(--sunset-yellow);
+  color: var(--sunset-yellow);
 }
 
 .icon-white {
-    color: white;
+  color: white;
 }
 
 /* layout */
 .padding-sm {
- padding: 5vw;
+  padding: 5vw;
 }
 
 .padding-md {
- padding: 10vw;
+  padding: 10vw;
 }
 
 .padding-lg {
- padding: 15vw;
+  padding: 15vw;
 }
 
 .margin-sm {
- margin: 0.5rem
+  margin: 0.5rem;
 }
 
 .margin-md {
- margin: 1rem
+  margin: 1rem;
 }
 
 .margin-lg {
- margin: 5rem
+  margin: 5rem;
 }
-
 
 /* component utils */
 .container {
-    margin: 5vw 15vw;
+  margin: 5vw 15vw;
 }
 
 .flex-container {
-    display: flex;
+  display: flex;
 }
 
-.flex-row { 
-    flex-wrap: row nowrap;
-    flex-flow: row;
+.flex-row {
+  flex-wrap: row nowrap;
+  flex-flow: row;
 }
 
 .flex-col {
-    flex-wrap: col nowrap;
-    flex-flow: column;
+  flex-wrap: col nowrap;
+  flex-flow: column;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat( 3, 3fr);
-    gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 5px;
 }
 
 .grid-2 {
-    display: grid;
-    grid-template-columns: repeat( 2, 2fr);
-    gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 5px;
 }
 
 h1 {
- font-size: 15vw;
+  font-size: 15vw;
 }
 
 h2 {
- font-size: 12.5vw;
+  font-size: 12.5vw;
 }
 
 h3 {
- font-size: 7vw;
+  font-size: 7vw;
 }
 
 h4 {
- font-size: 5vw;
+  font-size: 5vw;
 }
 
 h5 {
- font-size: 3vw;
+  font-size: 3vw;
 }
 
 h6 {
- font-size: 1vw;
+  font-size: 1vw;
 }
 
 /* media queries */
 
-
 @media (max-width: 600px) {
-    .container {
-        margin: 5vw 0vw
-    }
+  .container {
+    margin: 5vw 0vw;
+  }
 }
 
+@media (max-width: 1200px) {
+  #startBackground {
+    background: none;
+  }
 
+  #header-box {
+    background-color: white;
+  }
+
+  .code-snippet-3 {
+    width: 15%;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 85%;
+    right: 60%;
+  }
+}
