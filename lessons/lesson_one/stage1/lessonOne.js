@@ -82,7 +82,7 @@ const popup = `
         <i class="bi bi-x-square-fill"></i>
     </button>
 
-    <button onclick="playAudio('/assets/sound/HintSound.m4a')" style="padding-bottom: 1rem; border: none; background-color:transparent">
+    <button onclick="playAudio('../../../assets/sound/HintSound.m4a')" style="padding-bottom: 1rem; border: none; background-color:transparent">
     <i class="bi bi-volume-up-fill"></i>
     </button>
 

@@ -50,7 +50,7 @@ a {
 
 /* background styling */
 #startBackground {
-  background: url("/assets/images/startscreenbg.png");
+  background: url("./../assets/images/startscreenbg.png");
   background-position: 100% 0%;
   background-repeat: no-repeat;
   background-attachment: local;
